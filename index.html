@@ -27,7 +27,9 @@ h2{color:var(--blue);font-weight:700;font-size:1.7rem;margin-bottom:8px}
 .lede{color:var(--grey);max-width:40em;margin-bottom:30px}
 .row{display:grid;grid-template-columns:minmax(180px,300px) 1fr;gap:28px;align-items:center;padding:20px 0}
 .row+.row{border-top:1px solid var(--line)}
-.glyphs{font-size:clamp(2.4rem,6vw,3.6rem);color:var(--blue);font-weight:400;line-height:1.05}
+.glyphs{font-size:clamp(2.4rem,6vw,3.6rem);color:var(--blue);font-weight:400;line-height:1.05;min-width:0;overflow-wrap:anywhere}
+.glyphs.num{font-size:clamp(1.5rem,3.4vw,2.1rem);word-break:break-all}
+.row>*{min-width:0}
 .glyphs.bold{font-weight:700}
 .row p{max-width:34em}
 .toggle{display:inline-flex;align-items:center;gap:10px;margin-top:26px;background:var(--pale);border:1px solid var(--line);border-radius:8px;padding:10px 16px;font-size:.95rem;cursor:pointer;font-family:inherit;color:var(--ink)}
@@ -67,7 +69,7 @@ footer{padding:36px 0 48px;color:var(--grey);font-size:.85rem}
     <div class="row"><span class="glyphs">1lI</span><p>One, lowercase l and capital I each take a different shape, so codes and references read without guesswork.</p></div>
     <div class="row"><span class="glyphs">quip</span><p>The q carries a tail on its descender, so p and q are no longer mirror twins.</p></div>
     <div class="row"><span class="glyphs">wow</span><p>An open, uncrossed w. One less unfamiliar shape to decode.</p></div>
-    <div class="row"><span class="glyphs">0123456789</span><p>Lining figures align steadily in tables and hold their own beside capitals.</p></div>
+    <div class="row"><span class="glyphs num">0123456789</span><p>Lining figures align steadily in tables and hold their own beside capitals.</p></div>
     <div class="row"><span class="glyphs" style="font-size:1.3rem;line-height:1.7">room to breathe and read<br><span style="letter-spacing:-0.024em;word-spacing:-0.07em;color:#58595B">room to breathe and read</span></span><p>The same words with and without the extra spacing: every letter sits 2.4% of an em further apart and word spaces run 27% wider. Deliberately gentle — in the direction the reading research points, without ever looking spaced out. Add more with CSS or your app's settings; the font won't fight you.</p></div><div class="row"><span class="glyphs bold">grounded</span><p>Stroke weight settles gently toward the baseline, anchoring each letter without drawing attention.</p></div>
   </div>
   <button class="toggle" id="ordBtn" aria-pressed="false">Compare with an ordinary sans</button>
@@ -113,7 +115,7 @@ footer{padding:36px 0 48px;color:var(--grey);font-size:.85rem}
 <section>
   <h2>Who we are</h2>
   <p class="lede" style="max-width:44em">Listerdale Sans is made by <strong>Listerdale Life Sciences</strong>, a boutique advisory practice based in the Netherlands. We help life-science companies take products from idea to market, and clear communication is a working tool for us, not a nicety. Seventeen-plus companies advised, ten funding rounds supported, more than &euro;36M raised along the way.</p>
-  <a class="btn" href="https://listerdale.nl" style="background:#fff;color:var(--blue);border:2px solid var(--blue)">Visit Listerdale Life Sciences</a>
+  <a class="btn" href="#" style="background:#fff;color:var(--blue);border:2px solid var(--blue)">Visit Listerdale Life Sciences</a>
 </section>
 
 <footer>Listerdale Sans · SIL Open Font Licence 1.1</footer>
